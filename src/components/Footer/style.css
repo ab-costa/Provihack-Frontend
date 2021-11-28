@@ -1,10 +1,30 @@
 footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 90%;
   height: 50px;
   margin-top: 30px;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list li {
+  border: 1px solid #888;
+  border-radius: 50px;
+  padding: 2.5px;
+  background: #ff5311;
+
+  list-style-type: none;
+  margin-right: 5px;
+}
+
+.list a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
 }
 
 .btn-add {
@@ -15,5 +35,4 @@ footer {
   padding: 4px 50px;
   cursor: pointer;
   height: 30px;
-  margin-bottom: 40px;
 }

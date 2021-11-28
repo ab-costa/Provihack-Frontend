@@ -7,28 +7,6 @@
   width: 90vw;
 }
 
-.btn_show_map {
-  all: unset;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-color: rgb(126, 66, 99);
-
-  width: 100px;
-
-  padding: 10px;
-
-  border-radius: 3px;
-
-  color: #ffffff;
-
-  cursor: pointer;
-}
-
 .btn_show_map:hover {
   background-color: #5f7e77;
 }

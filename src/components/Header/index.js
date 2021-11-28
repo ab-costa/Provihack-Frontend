@@ -10,6 +10,9 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
 
     const [test, setTest] = useState('');
 
+    useEffect(()=> {
+        handleSearch()
+    }, [lat, lng])
     
     async function handleSearch() {
         const place = test.split(' ').join("%20");
@@ -17,19 +20,9 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
         try {
             const response = await fetch(`http://api.mapbox.com/geocoding/v5/mapbox.places/${place}.json?access_token=${token}`);
             const data = await response.json();
-
-            console.log(data.features[0].center[0]);
-            console.log(data.features[0].center[1]);
             
             setLat(data.features[0].center[1]);
             setLng(data.features[0].center[0]);
-
-            console.log(`lat: ${lat}`);            
-            console.log(`lng: ${lng}`);            
-    
-            console.log(data);
-
-            console.log('antes');
 
             setViewPort({
                 latitude: lat,
@@ -39,7 +32,7 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
                 height: "70vh"
             });
 
-            console.log('depois');
+           
         } catch (error) {
             console.log(error.message);            
         }
@@ -51,12 +44,7 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
             <a className="link_home" href="/home">
                 <h1>Mapa da <span>AUTONOMIA</span></h1>
             </a>
-            <button
-                className="btn_show_map"
-                onClick={() => setViewPortMapVisibility(!viewPortMapVisibility)}
-            >
-                Show map
-            </button>
+           
             <input className="input_header" type="text" onChange={(e) => setTest(e.target.value)} value={test} />
             <button
                 className="btn_search"
