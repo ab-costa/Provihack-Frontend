@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './style.css';
 
 export default function Header({ setViewPort, viewPortMapVisibility, setViewPortMapVisibility}) {
@@ -10,6 +10,7 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
 
     const [test, setTest] = useState('');
 
+    
     async function handleSearch() {
         const place = test.split(' ').join("%20");
 
