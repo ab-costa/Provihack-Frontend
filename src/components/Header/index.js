@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './style.css';
 
-export default function Header({viewPortMapVisibility, setViewPortMapVisibility}) {
+export default function Header({ setViewPort, viewPortMapVisibility, setViewPortMapVisibility}) {
     const token = 'pk.eyJ1IjoiYWItY29zdGEiLCJhIjoiY2t3aHZ1MnUxMTJwbTJ2b3ptNTRsNWt1YSJ9.f_53gozOVyksz9OoW59Ruw';
 
     const [lng, setLng] = useState(23.5501);
@@ -27,6 +27,18 @@ export default function Header({viewPortMapVisibility, setViewPortMapVisibility}
             console.log(`lng: ${lng}`);            
     
             console.log(data);
+
+            console.log('antes');
+
+            setViewPort({
+                latitude: lat,
+                longitude: lng,
+                zoom: 8.5,
+                width: "90vw",
+                height: "70vh"
+            });
+
+            console.log('depois');
         } catch (error) {
             console.log(error.message);            
         }

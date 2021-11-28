@@ -52,6 +52,7 @@ export default function Mapa() {
         <div className="map_page">
             <div className="box_header_viewport_map">
                 <Header
+                    setViewPort={setViewPort}
                     viewPortMapVisibility={viewPortMapVisibility}
                     setViewPortMapVisibility={setViewPortMapVisibility}
                 />

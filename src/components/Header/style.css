@@ -30,8 +30,10 @@
 }
 
 .btn_show_map:hover {
-    background-color: rgba(126, 66, 99, 50);
+    background-color: #5f7e77;
 }
+
+
 
 .input_header {
     all: unset;

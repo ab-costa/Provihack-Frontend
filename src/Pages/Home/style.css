@@ -34,21 +34,27 @@
 }
 
 .right {
+    position: relative;
+
     background-color: #ffffff;
 
     width: 30vw;
     height: 70vh;
 
-    padding: 20px;
     border: 2px solid #e6e3e3;
     border-radius: 15px;
 
     box-shadow: 3px 3px 3px #e6e3e3;
+
+    overflow: hidden;
 }
 
 .show_map {
     all: unset;
     box-sizing: border-box;
+
+    position: absolute;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;

@@ -8,6 +8,7 @@ export default function MarkerPopup({latitude, longitude}) {
     function HandlePopupVisibility() {
         setPopupVisibility(!popupVisibility);
     }
+    
     return(
         <>
             <Marker
