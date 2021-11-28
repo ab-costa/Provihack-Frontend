@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './style.css';
 
 export default function Header({ setViewPort, viewPortMapVisibility, setViewPortMapVisibility}) {
@@ -6,12 +6,16 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
 
     const [lng, setLng] = useState(23.5501);
     const [lat, setLat] = useState(-46.6336);
-    const [zoom, setZoom] = useState(9);
+    const [zoom, setZoom] = useState(8.5);
 
-    const [test, setTest] = useState('');
+    const [inputPlace, setInputPlace] = useState('');
+
+    useEffect(() => {
+        handleSearch();
+    }, [lat, lng]);
 
     async function handleSearch() {
-        const place = test.split(' ').join("%20");
+        const place = inputPlace.split(' ').join("%20");
 
         try {
             const response = await fetch(`http://api.mapbox.com/geocoding/v5/mapbox.places/${place}.json?access_token=${token}`);
@@ -56,7 +60,7 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
             >
                 Show map
             </button>
-            <input className="input_header" type="text" onChange={(e) => setTest(e.target.value)} value={test} />
+            <input className="input_header" type="text" onChange={(e) => setInputPlace(e.target.value)} value={inputPlace} />
             <button
                 className="btn_search"
                 onClick={handleSearch}
