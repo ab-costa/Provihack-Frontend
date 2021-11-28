@@ -14,6 +14,7 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
         handleSearch();
     }, [lat, lng]);
 
+    
     async function handleSearch() {
         const place = inputPlace.split(' ').join("%20");
 
