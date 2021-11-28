@@ -1,0 +1,56 @@
+.box_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90vw;
+}
+
+.btn_show_map {
+    all: unset;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(126, 66, 99);
+
+    width: 100px;
+
+    padding: 10px;
+
+    border-radius: 3px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.btn_show_map:hover {
+    background-color: rgba(126, 66, 99, 50);
+}
+
+.input_header {
+    all: unset;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 300px;
+
+    padding: 10px;
+    border: 1px solid rgb(126, 66, 99);
+    border-radius: 3px;
+
+    box-shadow: 3px 3px 3px rgb(126, 66, 99);
+}
+
+.link_home {
+    text-decoration: none;
+}
