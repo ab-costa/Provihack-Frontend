@@ -1,15 +1,9 @@
-import { useState } from 'react';
 import { Marker } from 'react-map-gl';
 import './style.css';
 
-export default function MarkerPopup({latitude, longitude, title, description, address}) {
-    const [popupVisibility, setPopupVisibility] = useState(false);
+export default function MarkerPopup({ feature, latitude, longitude, handleClickMarker }) {
 
-    function HandlePopupVisibility() {
-        setPopupVisibility(!popupVisibility);
-    }
-    
-    return(
+    return (
         <>
             <Marker
                 latitude={latitude}
@@ -21,17 +15,11 @@ export default function MarkerPopup({latitude, longitude, title, description, ad
                     <img
                         src="./assets/marker.svg"
                         alt="marker"
-                        onClick={ HandlePopupVisibility}
+                        onClick={() => {handleClickMarker("")
+                    console.log("marcador", feature)}}
                     />
-                    {popupVisibility &&
-                        <div className="popup_text">
-                            <h1>{title}</h1>
-                            <p>{description}</p>
-                            <p>{address}</p>
-                        </div>
-                    }
                 </div>
-            </Marker>           
+            </Marker>
         </>
-    );      
+    );
 }

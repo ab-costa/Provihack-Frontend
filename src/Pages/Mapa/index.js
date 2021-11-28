@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Popup from '../../components/Popup';
 import MarkerPopup from '../../components/MarkerPopup';
 import ReactMapGl from 'react-map-gl';
 
@@ -133,8 +134,8 @@ export default function Mapa() {
   };
 
   const features = geojson.features;
-  console.log(features);
-  console.log(features[0].geometry.coordinates.join('').replace('.', ''));
+ 
+  const [classPopup, setClassPopup] = useState("hidden");
 
   return (
     <div className="map_page">
@@ -151,15 +152,32 @@ export default function Mapa() {
               onViewportChange={(updatedViewport) => setViewPort(updatedViewport)}
               mapboxApiAccessToken={'pk.eyJ1IjoiYWItY29zdGEiLCJhIjoiY2t3aHZ1MnUxMTJwbTJ2b3ptNTRsNWt1YSJ9.f_53gozOVyksz9OoW59Ruw'}
               mapStyle={'mapbox://styles/mapbox/light-v10'}>
-              {features.map(feature =>
-                <MarkerPopup
-                  latitude={feature.geometry.coordinates[1]}
-                  longitude={feature.geometry.coordinates[0]}
-                  title={feature.properties.title}
-                  description={feature.properties.description}
-                  address={feature.properties.address}
-                />
-              )}
+              {features.map(feature => {
+                return (
+                  <div>
+                    <MarkerPopup
+                      key={feature.geometry.coordinates[1]}
+                      latitude={feature.geometry.coordinates[1]}
+                      longitude={feature.geometry.coordinates[0]}
+                      handleClickMarker={setClassPopup}
+                      feature={feature}
+                    />
+                    <Popup
+                    // Pegar do MarkerPopup
+                    // controle eventos => estado - como dorme;
+                    // retorna eventos
+                      key={feature.properties.title}
+                      title={feature.properties.title}
+                      description={feature.properties.description}
+                      address={feature.properties.address}
+                      setClassPopup={setClassPopup}
+                      classPopup={classPopup}
+                      feature={features}
+                    />
+                  </div>
+                )}
+                )
+              }
             </ReactMapGl>
           </div>
         }
