@@ -2,18 +2,48 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 90%;
   height: 50px;
+
   margin-top: 30px;
 }
 
 .btn-add {
   all: unset;
+  box-sizing: border-box;
+
   background: #3001da;
-  border-radius: 10px;
-  color: #ffffff;
-  padding: 4px 50px;
-  cursor: pointer;
+
   height: 30px;
+  padding: 4px 50px;
+  border-radius: 10px;
   margin-bottom: 40px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list li {
+  all: unset;
+  box-sizing: border-box;
+
+  border-radius: 50px;
+  padding: 5px;
+  background: #ff5311;
+
+  list-style-type: none;
+  margin-right: 5px;
+}
+
+.list a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
 }

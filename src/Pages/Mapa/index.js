@@ -13,7 +13,8 @@ export default function Mapa() {
     longitude: -46.63425454663673,
     zoom: 12.9,
     width: "90vw",
-    height: "70vh"
+    height: "70vh",
+    pitch: 50
   });
 
   const geojson = {

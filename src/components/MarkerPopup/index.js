@@ -21,7 +21,7 @@ export default function MarkerPopup({latitude, longitude, title, description, ad
                     <img
                         src="./assets/marker.svg"
                         alt="marker"
-                        onClick={ HandlePopupVisibility}
+                        onClick={HandlePopupVisibility}
                     />
                     {popupVisibility &&
                         <div className="popup_text">

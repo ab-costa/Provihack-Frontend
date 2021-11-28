@@ -1,36 +1,17 @@
 .box_header {
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 90vw;
-}
-
-.btn_show_map {
-  all: unset;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background-color: rgb(126, 66, 99);
+  background: linear-gradient(90.25deg, #ffffff 0%, #ffffff 113.87%);
+  box-shadow: 2px 2px 4px rgba(0, 61, 179, 0.15);
 
-  width: 100px;
+  width: 100vw;
+  height: 45px;
 
   padding: 10px;
-
-  border-radius: 3px;
-
-  color: #ffffff;
-
-  cursor: pointer;
-}
-
-.btn_show_map:hover {
-  background-color: #5f7e77;
 }
 
 .input_header {
@@ -43,12 +24,16 @@
   align-items: center;
 
   width: 300px;
-
+  margin-right: 10px;
   padding: 10px;
-  border: 1px solid rgb(126, 66, 99);
+  border: 1px solid #888;
   border-radius: 3px;
+  background: linear-gradient(90.25deg, #ffffff 0%, #ffffff 113.87%);
+  box-shadow: 2px 2px 4px rgba(0, 61, 179, 0.15);
+}
 
-  box-shadow: 3px 3px 3px rgb(126, 66, 99);
+.btn_show_map:hover {
+  background-color: #5f7e77;
 }
 
 .link_home {
@@ -57,10 +42,30 @@
 
 .btn_search {
   all: unset;
+  box-sizing: border-box;
+
   background: #3001da;
-  border-radius: 10px;
-  color: #ffffff;
-  padding: 4px 50px;
-  cursor: pointer;
   height: 30px;
+
+  padding: 4px 50px;
+  border-radius: 10px;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.logo {
+  margin-left: 10px;
+  margin-bottom: 20px;
+
+  position: fixed;
+  left: 0;
+  top: 5px;
+}
+
+.box_input_btn_search {
+  display: flex;
+  gap: 20px;
+
+  width: 300px
 }
