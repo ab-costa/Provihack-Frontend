@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import MarkerPopup from '../../components/MarkerPopup';
 import ReactMapGl from 'react-map-gl';
 
@@ -71,6 +72,7 @@ export default function Mapa() {
                     </div>
                 }
             </div>
+            <Footer />
         </div>
     );
 }
