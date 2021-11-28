@@ -9,29 +9,32 @@ function CadastrarLocal({setOpenCadastro}){
     setFormulario({ ...formulario, [event.target.name]: event.target.value });
   };
 
-  useEffect(() => {
-    async function handleSubmit(event) {
-      event.preventDefault();
+  // useEffect(() => {
+  //   handleSubmit();
 
-      const body = {
-        nome,
-        email,
-        nome_do_estabelecimento,
-        logradouro,
-        comentario
-      };
+  // }, []);  
 
-      const response = await fetch('ec2-18-213-133-45.compute-1.amazonaws.com', {
-        method: 'POST', 
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-      });
-      
-      return response.json();
-    }
-  }, []);  
+  // async function handleSubmit(event) {
+  //   event.preventDefault();
+
+  //   const body = {
+  //     nome: formulario.nome,
+  //     email: formulario.email,
+  //     nome_do_estabelecimento: formulario.nome_do_estabelecimento,
+  //     logradouro: formulario.logradouro,
+  //     comentario: formulario.comentario
+  //   };
+
+  //   const response = await fetch('ec2-18-213-133-45.compute-1.amazonaws.com', {
+  //     method: 'POST', 
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(body)
+  //   });
+    
+  //   return await response.json();
+  // }
   
     return(
         <div className="fundo-modal">
@@ -42,7 +45,7 @@ function CadastrarLocal({setOpenCadastro}){
                 onClick={() => setOpenCadastro(false)}
               />
               <h2>Cadastre um local</h2>
-              <form onSubmit={handleSubmit}>
+              <form>
                 <div className='width'>
                   <label>Nome</label>
                   <input type="text" name="nome" value={formulario.nome} onChange={(event) => handleChange(event.target)}/>
@@ -65,7 +68,7 @@ function CadastrarLocal({setOpenCadastro}){
                 </div>
 
                 <div>
-                  <button  className='btn-send' type='submit' onClick={handleSubmit}>Enviar</button>
+                  <button  className='btn-send' type='submit' >Enviar</button>
                 </div>
               </form>
           </div>
