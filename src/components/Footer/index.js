@@ -36,7 +36,12 @@ function Footer(){
             </li>
           </ul> 
       </div>
-      <button onClick={() => setOpenCadastro(true)} className='btn-add'>Adicionar Local</button>
+      <button 
+       onClick={() => setOpenCadastro(true)} 
+      className='btn-add'
+      >
+        Adicionar Local
+      </button>
       {openCadastro && <CadastrarLocal  setOpenCadastro={setOpenCadastro} />}
     </footer>
     )
