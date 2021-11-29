@@ -8,8 +8,13 @@
 # Projeto Hackathon
 
 ### Vídeo demo:  https://youtu.be/OrDgj76ebNk
+### Vídeo pitch: https://www.youtube.com/watch?v=ov3VAaD6BRo
 ## Objetivos: 
 -  Implementar uma API de geolocalização para indicar quais estabelecimentos possuem acessibilidade (autonomia, conforto e segurança)
+
+## A aplicação:
+- Um mapa colaborativo no qual pessoas com deficiência possam indicar locais que possuem adaptações voltadas à acessibilidade, bem como encontrar e fazer comentários sobre esses estabelecimentos - por exemplo, os tipos de deficiências que eles contemplam e quais as suas limitações desses ambientes. Dessa forma, o mapa também poderia ser utilizado para que os estabelecimentos saibam como podem melhorar.
+
 
 
 ### O que pode ser feito:
@@ -100,6 +105,8 @@ Pode parecer antagônico ou até mesmo antiético. No entanto, a realidade pode 
   - Tráfego
   - Venda de produtos personalizados para pessoas que simpatizam com a causa
   - Plataforma +Brasil (Programas federais com verba para o segmento)
+
+Além disso, vale lembrar que os dados levantados pelo mapa poderiam ser utilizados para mapear, por exemplo, bairros mais ou menos acessíveis, podendo até vir a servir para a implementação de políticas públicas. 
 
 
 
