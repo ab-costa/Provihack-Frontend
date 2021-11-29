@@ -1,6 +1,6 @@
 import './style.css';
 import close from '../../assets/close.svg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 function CadastrarLocal({ setOpenCadastro }) {
