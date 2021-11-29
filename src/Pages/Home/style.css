@@ -7,8 +7,9 @@
 .home_page {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    
 
     width: 100vw;
     height: 100vh;
@@ -22,15 +23,22 @@
 }
 
 .box_left {
-    background-color: rgb(126, 66, 99);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B81DB;
 
-    width: 60vw;
+    width: 50%;
     height: 100vh;
+
+    padding: 100px 200px;
 }
 
 .box_right {
     width: 40vw;
     height: 100vh;
+    flex-grow: 1;
 }
 
 .right {
@@ -56,7 +64,8 @@
     position: absolute;
     z-index: 1;
     
-    background-color: #5f7e77;
+    background-color: #1B81DB;
+    text-align: center;
 
     width: 150px;
 
@@ -70,7 +79,26 @@
 }
 
 .show_map:hover {
-    background-color: rgb(126, 66, 99);
+    background-color: #1B81DB;
 
     color: #ffffff;
+}
+
+.left-imgtext_container{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.home_img{
+    width: 200px;
+    height: 200px;
+}
+
+.left_text{
+    font-size: 60px;
+    margin-right: 10px;
+    color:#ffffff;
 }

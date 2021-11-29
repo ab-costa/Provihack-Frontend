@@ -12,11 +12,14 @@ export default function Home() {
         height: "100vh"
     });
 
-    return(
+    return (
         <div className="home_page">
             <div className="box_left">
                 <div className="left">
-
+                    <div className="left-imgtext_container">
+                        <h1 className="left_text">Mapa da Acessibilidade</h1>
+                        <img className="home_img" src="./assets/vetor-home.svg" />
+                    </div>
                 </div>
             </div>
             <div className="box_right">
@@ -26,7 +29,7 @@ export default function Home() {
                         onViewportChange={(updatedViewport) => setViewPort(updatedViewport)}
                         mapboxApiAccessToken={'pk.eyJ1IjoiYWItY29zdGEiLCJhIjoiY2t3aHZ1MnUxMTJwbTJ2b3ptNTRsNWt1YSJ9.f_53gozOVyksz9OoW59Ruw'}
                         mapStyle={'mapbox://styles/mapbox/light-v10'}
-                    >                        
+                    >
                     </ReactMapGl>
                     <a className="show_map" href="/mapa">Ver mapa</a>
                 </div>
