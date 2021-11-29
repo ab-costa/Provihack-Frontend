@@ -1,9 +1,8 @@
 .box_header {
-  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items:center;
+  position: relative;
 
   background: linear-gradient(90.25deg, #ffffff 0%, #ffffff 113.87%);
   box-shadow: 2px 2px 4px rgba(0, 61, 179, 0.15);
@@ -11,7 +10,9 @@
   width: 100vw;
   height: 45px;
 
-  padding: 10px;
+  margin-bottom: 20px;
+
+  padding: 30px;
 }
 
 .input_header {
@@ -55,17 +56,18 @@
 }
 
 .logo {
-  margin-left: 10px;
-  margin-bottom: 20px;
+  /* margin-left: 10px;
+  margin-bottom: 20px; */
 
-  position: fixed;
-  left: 0;
-  top: 5px;
+  align-self: flex-start;
 }
 
 .box_input_btn_search {
   display: flex;
+  justify-content: center;
+  align-items: baseline;
   gap: 20px;
+  flex-grow: 1;
+  width: 300px;
 
-  width: 300px
 }

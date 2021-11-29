@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import './style.css';
-import logo from '../../assets/logo.svg';
+// import logo from './assets/logo.svg';
 
-export default function Header({ setViewPort, viewPortMapVisibility, setViewPortMapVisibility}) {
+export default function Header({ setViewPort, viewPortMapVisibility, setViewPortMapVisibility }) {
     const token = 'pk.eyJ1IjoiYWItY29zdGEiLCJhIjoiY2t3aHZ1MnUxMTJwbTJ2b3ptNTRsNWt1YSJ9.f_53gozOVyksz9OoW59Ruw';
 
     const [lng, setLng] = useState(23.5501);
@@ -15,14 +15,14 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
         handleSearch();
     }, [lat, lng]);
 
-    
+
     async function handleSearch() {
         const place = inputPlace.split(' ').join("%20");
 
         try {
             const response = await fetch(`http://api.mapbox.com/geocoding/v5/mapbox.places/${place}.json?access_token=${token}`);
             const data = await response.json();
-            
+
             setLat(data.features[0].center[1]);
             setLng(data.features[0].center[0]);
 
@@ -34,15 +34,15 @@ export default function Header({ setViewPort, viewPortMapVisibility, setViewPort
                 height: "70vh"
             });
         } catch (error) {
-            console.log(error.message);            
+            console.log(error.message);
         }
     }
 
-    return(
+    return (
         <div className="box_header">
-            <a className="link_home" href="/home">
-                <img className="logo" src={logo} alt="logo" />
-            </a>
+            <div className="logo_div">
+                <img className="logo" src="./assets/logo.svg" alt="logo" />
+            </div>
             <div className="box_input_btn_search">
                 <input
                     className="input_header"
